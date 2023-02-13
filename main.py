@@ -16,14 +16,18 @@ def stopwatch():
         if int(elapsed_time) % 60 == 0:
             winsound.PlaySound("SystemExclamation", winsound.SND_ALIAS)
 
+def exit_program():
+    root.destroy()
+
 root = tk.Tk()
 root.title("Stopwatch")
 label = tk.Label(root, text="")
 label.pack(pady=20)
+exit_button = tk.Button(root, text="Exit", command=exit_program)
+exit_button.pack(pady=20)
 
 if __name__ == "__main__":
     stopwatch()
     root.mainloop()
 
-# is used to hide the root window. The root window is not needed for the stopwatch to work, so it is hidden.
 root.withdraw()
