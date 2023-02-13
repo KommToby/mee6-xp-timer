@@ -20,7 +20,8 @@ def exit_program():
     root.destroy()
 
 root = tk.Tk()
-root.title("Stopwatch")
+root.geometry("250x140")
+root.title("Mee6 XP Timer")
 label = tk.Label(root, text="")
 label.pack(pady=20)
 exit_button = tk.Button(root, text="Exit", command=exit_program)
@@ -30,4 +31,4 @@ if __name__ == "__main__":
     stopwatch()
     root.mainloop()
 
-root.withdraw()
+root.withdraw
